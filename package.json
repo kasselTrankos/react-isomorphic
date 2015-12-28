@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch-server": "NODE_PATH=\"./src\" node --harmony ./babel.server",
+    "js-client": "./node_modules/.bin/webpack --verbose --colors --display-error-details --config webpack.client.js",
+    "watch-client":"./node_modules/.bin/webpack-dev-server --config webpack.client-watch.js",
+    "start": "./node_modules/.bin/concurrent --kill-others \"npm run js-client\" \"npm run watch-client\" \"npm run watch-server\""
   },
   "author": "",
   "license": "ISC",
@@ -12,5 +16,16 @@
     "koa": "^1.1.2",
     "react": "^0.14.3",
     "react-router": "^1.0.3"
+  },
+  "devDependencies": {
+    "babel": "^6.3.26",
+    "babel-cli": "^6.3.17",
+    "babel-loader": "^6.2.0",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "babel-preset-stage-0": "^6.3.13",
+    "concurrently": "^1.0.0",
+    "webpack": "^1.12.9",
+    "webpack-dev-server": "^1.14.0"
   }
 }
