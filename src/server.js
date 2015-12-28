@@ -19,7 +19,7 @@ app.use(function *(next){
       if (renderProps) {
         let __html= ReactDOM.renderToStaticMarkup(<RoutingContext {...renderProps} />);
 
-        const data = { title: '', description: '', css: '', body: __html, entry: 'http://localhost:8080/public/main.js' };
+        const data = { title: 'Servidor', description: '', css: '', body: __html, entry: 'http://localhost:8080/public/main.js' };
         this.body = ReactDOM.renderToString(<Html {...data} />);
       }
       callback(null);
