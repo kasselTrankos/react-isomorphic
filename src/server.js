@@ -18,8 +18,8 @@ app.use(function *(next){
 		match({routes, location}, (error, redirectLocation, renderProps) => {
       if (renderProps) {
         let __html= ReactDOM.renderToStaticMarkup(<RoutingContext {...renderProps} />);
-        console.log(__html, ' raw sanitize', renderProps);
-        const data = { title: '', description: '', css: '', body: '<p>hola mundo</p>', entry: 'main.js' };
+
+        const data = { title: '', description: '', css: '', body: __html, entry: 'http://localhost:8080/public/main.js' };
         this.body = ReactDOM.renderToString(<Html {...data} />);
       }
       callback(null);
