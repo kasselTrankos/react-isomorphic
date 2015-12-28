@@ -1,10 +1,8 @@
 require("babel-polyfill");
-
 require("babel-core/register")({
 	only: /src/,
 	presets: ["es2015", "react", "stage-0"]
 });
-
 /**
  * Define isomorphic constants.
  */
@@ -21,5 +19,5 @@ try {
 	require("./src/server");
 }
 catch (error) {
-	console.error(error.stack);
+	console.error('ERROR: ',error.stack);
 }
