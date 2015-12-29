@@ -1,4 +1,4 @@
-# REACT/RELAY
+# REACT/REDUX
 
 Next experiment of use React, in isomorphic envoirement. Now try to use it with relay.
 
@@ -19,3 +19,5 @@ npm start
 ```
 An you can view in browser by
 [http://localhost:8001](http://localhost:8001)
+
+Implements Redux, as reducer data
