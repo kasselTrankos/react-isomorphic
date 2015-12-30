@@ -6,9 +6,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch-server": "NODE_PATH=\"./src\" node --harmony ./babel.middleware",
+    "nodemon-server": "NODE_PATH=\"./src\" nodemon server.hot",
+    "js-server":"./node_modules/.bin/webpack --verbose --colors --display-error-details --config webpack.server.js",
     "js-client": "./node_modules/.bin/webpack --verbose --colors --display-error-details --config webpack.init.js",
     "watch-client": "./node_modules/.bin/webpack-dev-server --config webpack.client-watch.js",
-    "start": "./node_modules/.bin/concurrent --kill-others \"npm run js-client\" \"npm run watch-client\" \"npm run watch-server\""
+    "start": "./node_modules/.bin/concurrent --kill-others \"npm run js-server\" \"npm run js-client\" \"npm run watch-client\" \"npm run nodemon-server\""
   },
   "author": "",
   "license": "ISC",
@@ -38,18 +40,14 @@
     "css-loader": "^0.23.1",
     "extract-text-webpack-plugin": "^0.9.1",
     "file-loader": "^0.8.5",
-    "font-awesome-webpack": "0.0.4",
     "isomorphic-style-loader": "0.0.5",
     "json-loader": "^0.5.4",
-    "kill3k": "^0.2.0",
-    "koa-webpack-dev-server": "^0.3.0",
     "node-sass": "^3.4.2",
     "nodemon": "^1.8.1",
     "sass-loader": "^3.1.2",
     "style-loader": "^0.13.0",
     "url-loader": "^0.5.7",
     "webpack": "^1.12.9",
-    "webpack-dev-hmr": "^1.0.0",
     "webpack-dev-server": "^1.14.0",
     "webpack-hot-middleware": "^2.6.0",
     "webpack-middleware": "^1.4.0"

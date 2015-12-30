@@ -102,7 +102,7 @@ module.exports =
         res.redirect(302, redirectLocation.pathname + redirectLocation.search);
       } else if (renderProps) {
         var __body = _server2.default.renderToStaticMarkup(_react2.default.createElement(_reactRouter.RoutingContext, renderProps));
-        var data = { title: '', description: '', css: '', body: __body, entry: 'main.js' };
+        var data = { title: 'Servidor', description: '', css: '', style: 'http://localhost:8080/public/bootstrap.css', body: __html, entry: 'http://localhost:8080/public/main.js' };
         var __html = _server2.default.renderToString(_react2.default.createElement(_Html2.default, data));
         res.status(200).send(__html);
       } else {
@@ -55922,7 +55922,27 @@ module.exports =
           _react2.default.createElement(
             'p',
             null,
-            'Main to todos'
+            'Main to todos ke lo oi es ffd re maingan'
+          ),
+          _react2.default.createElement(
+            'p',
+            null,
+            'hola a main alddl, no maquiolo,, tele vale tanto'
+          ),
+          _react2.default.createElement(
+            'p',
+            null,
+            'casi casi lo tento',
+            _react2.default.createElement(
+              'span',
+              null,
+              'vli'
+            )
+          ),
+          _react2.default.createElement(
+            'p',
+            null,
+            'Mi '
           ),
           _react2.default.createElement(
             _reactRedux.Provider,

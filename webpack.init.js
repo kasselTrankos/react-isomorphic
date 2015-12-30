@@ -14,7 +14,6 @@ module.exports = {
 				exclude: /(node_modules|bower_components)/
 			}, {
         test: /\.scss$/,
-        //loaders: ["style", "css", "sass"],
         include: /assets/,
         loader: ExtractTextPlugin.extract("style", "css!sass")
       }, { test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,
@@ -31,7 +30,7 @@ module.exports = {
         test: /\.scss$/,
         loaders: ["style", "css", "sass"],
         include: /src/,
-        //loader: ExtractTextPlugin.extract("style", "css!sass")
+
       },
 		]
 	},

@@ -27,7 +27,7 @@ server.get('*', (req, res, next) => {
       res.redirect(302, redirectLocation.pathname + redirectLocation.search)
     } else if (renderProps) {
       let __body= ReactDOM.renderToStaticMarkup(<RoutingContext {...renderProps} />);
-      const data = { title: '', description: '', css: '', body: __body, entry: 'main.js' };
+      const data = { title: 'Servidor', description: '', css:'',style:'http://localhost:8080/public/bootstrap.css', body: __html, entry: 'http://localhost:8080/public/main.js' };
       let __html = ReactDOM.renderToString(<Html {...data} />);
       res.status(200).send(__html)
     } else {
