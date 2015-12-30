@@ -76,13 +76,13 @@ module.exports =
 
   var _routes2 = _interopRequireDefault(_routes);
 
-  var _history = __webpack_require__(381);
+  var _history = __webpack_require__(382);
 
-  var _Html = __webpack_require__(386);
+  var _Html = __webpack_require__(387);
 
   var _Html2 = _interopRequireDefault(_Html);
 
-  var _server = __webpack_require__(387);
+  var _server = __webpack_require__(388);
 
   var _server2 = _interopRequireDefault(_server);
 
@@ -55850,6 +55850,10 @@ module.exports =
 
   var _About2 = _interopRequireDefault(_About);
 
+  var _Twitter = __webpack_require__(381);
+
+  var _Twitter2 = _interopRequireDefault(_Twitter);
+
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
   /**
@@ -55859,7 +55863,8 @@ module.exports =
   	_reactRouter.Router,
   	null,
   	_react2.default.createElement(_reactRouter.Route, { path: "/", component: _Main2.default }),
-  	_react2.default.createElement(_reactRouter.Route, { path: "/about", component: _About2.default })
+  	_react2.default.createElement(_reactRouter.Route, { path: "/about", component: _About2.default }),
+  	_react2.default.createElement(_reactRouter.Route, { path: "/twitter", component: _Twitter2.default })
   );
 
 /***/ },
@@ -57474,7 +57479,7 @@ module.exports =
           null,
           'Clicked: ',
           accounts,
-          ' times',
+          ' times, fo',
           ' ',
           _react2.default.createElement(
             'button',
@@ -57733,7 +57738,7 @@ module.exports =
             _react2.default.createElement(
               'p',
               null,
-              'Main to todos in About'
+              'Main to todos in Abpaosout'
             ),
             _react2.default.createElement(
               'div',
@@ -57754,6 +57759,74 @@ module.exports =
 /* 381 */
 /***/ function(module, exports, __webpack_require__) {
 
+  "use strict";
+
+  var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+
+  var _react = __webpack_require__(149);
+
+  var _react2 = _interopRequireDefault(_react);
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+  function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+  function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+  var Twitter = (function (_Component) {
+    _inherits(Twitter, _Component);
+
+    function Twitter() {
+      _classCallCheck(this, Twitter);
+
+      return _possibleConstructorReturn(this, Object.getPrototypeOf(Twitter).apply(this, arguments));
+    }
+
+    _createClass(Twitter, [{
+      key: "render",
+      value: function render() {
+        return _react2.default.createElement(
+          "div",
+          { className: "row" },
+          _react2.default.createElement(
+            "div",
+            { className: "col-xs-1" },
+            " "
+          ),
+          _react2.default.createElement(
+            "div",
+            { className: "col-xs-10" },
+            _react2.default.createElement(MainMenu, null),
+            _react2.default.createElement(
+              "p",
+              null,
+              "Soy Twitter"
+            )
+          ),
+          _react2.default.createElement(
+            "div",
+            { className: "col-xs-1" },
+            " "
+          )
+        );
+      }
+    }]);
+
+    return Twitter;
+  })(_react.Component);
+
+  exports.default = Twitter;
+
+/***/ },
+/* 382 */
+/***/ function(module, exports, __webpack_require__) {
+
   'use strict';
 
   exports.__esModule = true;
@@ -57768,7 +57841,7 @@ module.exports =
 
   var _createLocation3 = _interopRequireDefault(_createLocation2);
 
-  var _createBrowserHistory = __webpack_require__(382);
+  var _createBrowserHistory = __webpack_require__(383);
 
   var _createBrowserHistory2 = _interopRequireDefault(_createBrowserHistory);
 
@@ -57792,7 +57865,7 @@ module.exports =
 
   exports.useBasename = _useBasename3['default'];
 
-  var _useBeforeUnload2 = __webpack_require__(383);
+  var _useBeforeUnload2 = __webpack_require__(384);
 
   var _useBeforeUnload3 = _interopRequireDefault(_useBeforeUnload2);
 
@@ -57812,13 +57885,13 @@ module.exports =
 
   // deprecated
 
-  var _enableBeforeUnload2 = __webpack_require__(384);
+  var _enableBeforeUnload2 = __webpack_require__(385);
 
   var _enableBeforeUnload3 = _interopRequireDefault(_enableBeforeUnload2);
 
   exports.enableBeforeUnload = _enableBeforeUnload3['default'];
 
-  var _enableQueries2 = __webpack_require__(385);
+  var _enableQueries2 = __webpack_require__(386);
 
   var _enableQueries3 = _interopRequireDefault(_enableQueries2);
 
@@ -57827,7 +57900,7 @@ module.exports =
   exports.createLocation = createLocation;
 
 /***/ },
-/* 382 */
+/* 383 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -58010,7 +58083,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 383 */
+/* 384 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -58126,7 +58199,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 384 */
+/* 385 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -58139,7 +58212,7 @@ module.exports =
 
   var _deprecate2 = _interopRequireDefault(_deprecate);
 
-  var _useBeforeUnload = __webpack_require__(383);
+  var _useBeforeUnload = __webpack_require__(384);
 
   var _useBeforeUnload2 = _interopRequireDefault(_useBeforeUnload);
 
@@ -58147,7 +58220,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 385 */
+/* 386 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -58168,7 +58241,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 386 */
+/* 387 */
 /***/ function(module, exports, __webpack_require__) {
 
   "use strict";
@@ -58245,7 +58318,7 @@ module.exports =
   exports.default = Html;
 
 /***/ },
-/* 387 */
+/* 388 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';

@@ -12,6 +12,7 @@ export default class MainMenu extends Component{
         <ol className="breadcrumb">
           <li><Link to="/" activeStyle={ACTIVE}>Home</Link></li>
           <li><Link to="/about" activeStyle={ACTIVE}>About</Link></li>
+          <li><Link to="/twitter" activeStyle={ACTIVE}>Twitter</Link></li>
         </ol>
       </div>
     );

@@ -16,9 +16,8 @@ function Compile(compiler, options){
   compiler.plugin("done", function(err, stats){
     let _this = this;
     let data = this.middleware.fileSystem.data.build["server.js"].toString("utf8");
-
-    if(typeof(server)=='undefined')eval(data);
-    ///no me creo no tener que eliminar el puerto, cro qu es por juntar los fos
+    if(typeof(server)=='undefined') eval(data);
+    //no es reak ek update, esta hecho por el front no el back, mmm
     /*this.killPort((err)=>{
       if(!err)eval(data);
     });*/
