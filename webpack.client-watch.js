@@ -1,6 +1,7 @@
 var webpack = require("webpack");
 var config = require("./webpack.init.js");
-
+///removes bootstrap, from config, Make dinamyc later
+config.entry.pop();
 var hostname = process.env.HOSTNAME || "localhost";
 
 config.cache = true;
