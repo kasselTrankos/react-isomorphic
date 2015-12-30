@@ -22,6 +22,6 @@ An you can view in browser by
 
 Include [bootstrap-sass](https://github.com/twbs/bootstrap-sass), at the head of the server, after parser as css.
 
-Generate code by webpack for client and server. Becose that only can parse .scss into code.
+Generate code by [webpack](webpack.github.io) for client and server. Because that only can parse .scss into code.
 
 Implements Redux, as reducer data

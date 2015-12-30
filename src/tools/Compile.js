@@ -9,7 +9,7 @@ function Compile(compiler, options){
   this.sockets = [];
   this.middleware = webpackMiddleware(compiler);
   this.killPort = function(callback, port=8001){
-    var child = cp.exec(' lsof -i:' + port +'|xargs killall', (error, stdout, stderr)=>{
+    var child = cp.exec(' lsof -wni tcp:'+port+' | awk \'NR>1{kill -9 $2}\'', (error, stdout, stderr)=>{
       if(callback) callback(error);
     });
   }
@@ -18,9 +18,10 @@ function Compile(compiler, options){
     let data = this.middleware.fileSystem.data.build["server.js"].toString("utf8");
 
     if(typeof(server)=='undefined')eval(data);
-    this.killPort((err)=>{
+    ///no me creo no tener que eliminar el puerto, cro qu es por juntar los fos
+    /*this.killPort((err)=>{
       if(!err)eval(data);
-    });
+    });*/
   }.bind(this));
 
 }

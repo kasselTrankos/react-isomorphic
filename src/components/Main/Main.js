@@ -10,15 +10,19 @@ export default class Main extends React.Component{
   render(){
     const store = configureStore();
     return (
-      <div>
-        <MainMenu></MainMenu>
-        <p>Main to todos ke lo oi es ffd re maingan</p>
-        <p>hola a main alddl, no maquiolo,, tele vale tanto</p>
-        <p>casi casi lo tento<span>vli</span></p>
-        <p>Mi </p>
-        <Provider store={store}>
-          <Accounts />
-        </Provider>
+      <div className="row">
+        <div className="col-xs-1">&nbsp;</div>
+        <div className="col-xs-10">
+          <MainMenu></MainMenu>
+          <p>Main to todos ke lo oi es ffd re maingan</p>
+          <p>hola a main alddl, no maquiolo,, tele vale tanto</p>
+          <p>casi casi lo tento<span>vli</span></p>
+          <p>Mi </p>
+          <Provider store={store}>
+            <Accounts />
+          </Provider>
+        </div>
+        <div className="col-xs-1">&nbsp;</div>
       </div>
       )
   }

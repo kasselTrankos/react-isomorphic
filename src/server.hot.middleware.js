@@ -5,4 +5,4 @@ const compiler = webpack(webpackConfig);
 webpackConfig.output.path='/build'
 
 var compile = new Compile(webpack(webpackConfig),
-  {path:'build', name: webpackConfig.output.filename})
+  {path:'build', name: webpackConfig.output.filename, noInfo:true})

@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch-server": "NODE_PATH=\"./src\" node --harmony ./babel.middleware",
     "nodemon-server": "NODE_PATH=\"./src\" nodemon server.hot",
-    "js-server":"./node_modules/.bin/webpack --verbose --colors --display-error-details --config webpack.server.js",
+    "js-server": "./node_modules/.bin/webpack --verbose --colors --display-error-details --config webpack.server.js",
     "js-client": "./node_modules/.bin/webpack --verbose --colors --display-error-details --config webpack.init.js",
     "watch-client": "./node_modules/.bin/webpack-dev-server --config webpack.client-watch.js",
     "start": "./node_modules/.bin/concurrent --kill-others \"npm run js-server\" \"npm run js-client\" \"npm run watch-client\" \"npm run nodemon-server\""
@@ -19,6 +19,7 @@
     "express": "^4.13.3",
     "history": "^1.17.0",
     "koa": "^1.1.2",
+    "q": "^1.4.1",
     "react": "^0.14.3",
     "react-dom": "^0.14.3",
     "react-hot-loader": "^1.3.0",

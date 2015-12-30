@@ -55917,37 +55917,51 @@ module.exports =
         var store = (0, _Accounts4.default)();
         return _react2.default.createElement(
           'div',
-          null,
-          _react2.default.createElement(_MainMenu2.default, null),
+          { className: 'row' },
           _react2.default.createElement(
-            'p',
-            null,
-            'Main to todos ke lo oi es ffd re maingan'
+            'div',
+            { className: 'col-xs-1' },
+            ' '
           ),
           _react2.default.createElement(
-            'p',
-            null,
-            'hola a main alddl, no maquiolo,, tele vale tanto'
-          ),
-          _react2.default.createElement(
-            'p',
-            null,
-            'casi casi lo tento',
+            'div',
+            { className: 'col-xs-10' },
+            _react2.default.createElement(_MainMenu2.default, null),
             _react2.default.createElement(
-              'span',
+              'p',
               null,
-              'vli'
+              'Main to todos ke lo oi es ffd re maingan'
+            ),
+            _react2.default.createElement(
+              'p',
+              null,
+              'hola a main alddl, no maquiolo,, tele vale tanto'
+            ),
+            _react2.default.createElement(
+              'p',
+              null,
+              'casi casi lo tento',
+              _react2.default.createElement(
+                'span',
+                null,
+                'vli'
+              )
+            ),
+            _react2.default.createElement(
+              'p',
+              null,
+              'Mi '
+            ),
+            _react2.default.createElement(
+              _reactRedux.Provider,
+              { store: store },
+              _react2.default.createElement(_Accounts2.default, null)
             )
           ),
           _react2.default.createElement(
-            'p',
-            null,
-            'Mi '
-          ),
-          _react2.default.createElement(
-            _reactRedux.Provider,
-            { store: store },
-            _react2.default.createElement(_Accounts2.default, null)
+            'div',
+            { className: 'col-xs-1' },
+            ' '
           )
         );
       }
@@ -57706,13 +57720,27 @@ module.exports =
       value: function render() {
         return _react2.default.createElement(
           'div',
-          null,
+          { className: 'row' },
           _react2.default.createElement(
-            'p',
-            null,
-            'Main to todos in About'
+            'div',
+            { className: 'col-xs-1' },
+            ' '
           ),
-          _react2.default.createElement(_MainMenu2.default, null)
+          _react2.default.createElement(
+            'div',
+            { className: 'col-xs-10' },
+            _react2.default.createElement(_MainMenu2.default, null),
+            _react2.default.createElement(
+              'p',
+              null,
+              'Main to todos in About'
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'col-xs-1' },
+              ' '
+            )
+          )
         );
       }
     }]);

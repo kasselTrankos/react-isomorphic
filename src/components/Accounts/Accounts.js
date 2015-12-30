@@ -12,7 +12,7 @@ export default class Accounts extends Component{
     const { increment, incrementIfOdd, incrementAsync, decrement, accounts } = this.props
     return (
       <p>
-        Clicked: {accounts} times
+        Clicked: {accounts} times, fo
         {' '}
         <button onClick={increment}>+</button>
         {' '}
