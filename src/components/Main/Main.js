@@ -1,4 +1,6 @@
+import './Main.scss';
 import React, { Component, PropTypes } from 'react';
+
 import MainMenu from '../MainMenu'
 import Accounts from './../../containers/Accounts'
 import { Provider } from 'react-redux'
@@ -10,7 +12,10 @@ export default class Main extends React.Component{
     return (
       <div>
         <MainMenu></MainMenu>
-        <p>Main to todos</p>
+        <p>Main to todos ke lo oi es ffd re maingan</p>
+        <p>hola a main alddl, no maquiolo,, tele vale tanto</p>
+        <p>casi casi lo tento<span>vli</span></p>
+        <p>Mi </p>
         <Provider store={store}>
           <Accounts />
         </Provider>

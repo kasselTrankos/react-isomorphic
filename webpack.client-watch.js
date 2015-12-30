@@ -1,5 +1,5 @@
 var webpack = require("webpack");
-var config = require("./webpack.client.js");
+var config = require("./webpack.init.js");
 
 var hostname = process.env.HOSTNAME || "localhost";
 
@@ -20,11 +20,11 @@ config.plugins = [
 	new webpack.DefinePlugin({__CLIENT__: true, __SERVER__: false}),
 	new webpack.HotModuleReplacementPlugin()
 ];
-
+/*
 config.module.postLoaders =  [
 	{test: /\.js$/, loaders: ["react-hot"], exclude: /(node_modules|bower_components)/}
 ];
-
+*/
 config.devServer = {
 	publicPath:  "http://" + hostname + ":8080/public/",
 	contentBase: "./build",

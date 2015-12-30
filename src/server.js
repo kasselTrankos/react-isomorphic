@@ -7,7 +7,7 @@ import {createLocation} from 'history';
 import Html from './components/Html';
 import ReactDOM from 'react-dom/server';
 
-var app = koa();
+var app = global.server = koa();
 const hostname = process.env.HOSTNAME || "localhost";
 const port     = process.env.PORT || 8001;
 
@@ -27,6 +27,7 @@ app.use(function *(next){
   })
 });
 app.listen(port, () => {
-	console.info("==> ✅  Server is listening");
+  console.log(`The server is running at http://localhost:${port}/`);
+	console.info("==> ✅  Server is listedningñ, o");
 	console.info("==> 🌎  Go to http://%s:%s", hostname, port);
 });

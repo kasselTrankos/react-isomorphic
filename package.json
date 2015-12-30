@@ -39,11 +39,19 @@
     "extract-text-webpack-plugin": "^0.9.1",
     "file-loader": "^0.8.5",
     "font-awesome-webpack": "0.0.4",
+    "isomorphic-style-loader": "0.0.5",
+    "json-loader": "^0.5.4",
+    "kill3k": "^0.2.0",
+    "koa-webpack-dev-server": "^0.3.0",
     "node-sass": "^3.4.2",
+    "nodemon": "^1.8.1",
     "sass-loader": "^3.1.2",
     "style-loader": "^0.13.0",
     "url-loader": "^0.5.7",
     "webpack": "^1.12.9",
-    "webpack-dev-server": "^1.14.0"
+    "webpack-dev-hmr": "^1.0.0",
+    "webpack-dev-server": "^1.14.0",
+    "webpack-hot-middleware": "^2.6.0",
+    "webpack-middleware": "^1.4.0"
   }
 }

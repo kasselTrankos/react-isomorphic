@@ -20,4 +20,7 @@ npm start
 An you can view in browser by
 [http://localhost:8001](http://localhost:8001)
 
+Include [bootstrap-sass](https://github.com/twbs/bootstrap-sass), at the head of the server, after parser as css.
+
+
 Implements Redux, as reducer data
