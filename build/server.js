@@ -66,6 +66,10 @@ module.exports =
 
   var _express2 = _interopRequireDefault(_express);
 
+  var _http = __webpack_require__(91);
+
+  var _http2 = _interopRequireDefault(_http);
+
   var _react = __webpack_require__(149);
 
   var _react2 = _interopRequireDefault(_react);
@@ -89,7 +93,7 @@ module.exports =
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
   var server = global.server = (0, _express2.default)();
-  server.use(_express2.default.static(_path2.default.join(__dirname, 'public')));
+  server.use(_express2.default.static(_path2.default.join(__dirname, 'build', 'public')));
 
   var app = (0, _koa2.default)();
   var hostname = process.env.HOSTNAME || "localhost";
@@ -56301,6 +56305,15 @@ module.exports =
                 { to: '/about', activeStyle: ACTIVE },
                 'About'
               )
+            ),
+            _react2.default.createElement(
+              'li',
+              null,
+              _react2.default.createElement(
+                _reactRouter.Link,
+                { to: '/twitter', activeStyle: ACTIVE },
+                'Twitter'
+              )
             )
           )
         );
@@ -57771,6 +57784,10 @@ module.exports =
 
   var _react2 = _interopRequireDefault(_react);
 
+  var _MainMenu = __webpack_require__(355);
+
+  var _MainMenu2 = _interopRequireDefault(_MainMenu);
+
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
   function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -57802,11 +57819,21 @@ module.exports =
           _react2.default.createElement(
             "div",
             { className: "col-xs-10" },
-            _react2.default.createElement(MainMenu, null),
+            _react2.default.createElement(_MainMenu2.default, null),
             _react2.default.createElement(
               "p",
               null,
-              "Soy Twitter"
+              "Soy Twitter, qddpiodf reloadffffuita es"
+            ),
+            _react2.default.createElement(
+              "p",
+              null,
+              "koko"
+            ),
+            _react2.default.createElement(
+              "p",
+              null,
+              "o kambia adolfchangdde meeso rerun!, melo hi molo"
             )
           ),
           _react2.default.createElement(

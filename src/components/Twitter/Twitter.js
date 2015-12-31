@@ -8,7 +8,9 @@ export default class Twitter extends Component{
         <div className="col-xs-1">&nbsp;</div>
         <div className="col-xs-10">
           <MainMenu></MainMenu>
-          <p>Soy Twitter</p>
+          <p>Soy Twitter, qddpiodf reloadffffuita es</p>
+          <p>koko</p>
+          <p>o kambia adolfchangdde meeso rerun!, melo hi molo</p>
         </div>
         <div className="col-xs-1">&nbsp;</div>
       </div>

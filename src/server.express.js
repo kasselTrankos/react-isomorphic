@@ -1,7 +1,7 @@
 import koa from 'koa';
 import path from "path";
 import express from "express";
-
+import http from 'http';
 import React from "react";
 import {RoutingContext, match} from "react-router";
 import routes from './routes';
@@ -12,7 +12,7 @@ import ReactDOM from 'react-dom/server';
 
 
 const server = global.server = express();
-server.use(express.static(path.join(__dirname, 'public')));
+server.use(express.static(path.join(__dirname, 'build', 'public')));
 
 
 
