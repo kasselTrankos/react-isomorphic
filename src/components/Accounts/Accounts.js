@@ -14,13 +14,13 @@ export default class Accounts extends Component{
       <p>
         Clicked: {accounts} times, fo
         {' '}
-        <button onClick={increment}>+</button>
+        <button onClick={increment} className="btn btn-default">+</button>
         {' '}
-        <button onClick={decrement}>-</button>
+        <button onClick={decrement} className="btn btn-default">-</button>
         {' '}
-        <button onClick={incrementIfOdd}>Increment if odd</button>
+        <button onClick={incrementIfOdd} className="btn btn-default">Increment if odd</button>
         {' '}
-        <button onClick={() => incrementAsync()}>Increment async</button>
+        <button onClick={() => incrementAsync()} className="btn btn-default">Increment async</button>
       </p>
     )
   };

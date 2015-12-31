@@ -57496,19 +57496,19 @@ module.exports =
           ' ',
           _react2.default.createElement(
             'button',
-            { onClick: increment },
+            { onClick: increment, className: 'btn btn-default' },
             '+'
           ),
           ' ',
           _react2.default.createElement(
             'button',
-            { onClick: decrement },
+            { onClick: decrement, className: 'btn btn-default' },
             '-'
           ),
           ' ',
           _react2.default.createElement(
             'button',
-            { onClick: incrementIfOdd },
+            { onClick: incrementIfOdd, className: 'btn btn-default' },
             'Increment if odd'
           ),
           ' ',
@@ -57516,7 +57516,7 @@ module.exports =
             'button',
             { onClick: function onClick() {
                 return incrementAsync();
-              } },
+              }, className: 'btn btn-default' },
             'Increment async'
           )
         );
