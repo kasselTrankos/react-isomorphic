@@ -1,4 +1,4 @@
-import './Main.scss';
+import css from './Main.scss';
 import React, { Component, PropTypes } from 'react';
 
 import MainMenu from '../MainMenu'
@@ -14,7 +14,7 @@ export default class Main extends React.Component{
         <div className="col-xs-1">&nbsp;</div>
         <div className="col-xs-10">
           <MainMenu></MainMenu>
-          <p>Main to todos ke lo oi es ffd re maingan</p>
+          <p className="hto-main">Main to todos ke lo oi es ffd re maingan</p>
           <p>hola a main alddl, no maquiolo,, tele vale tanto</p>
           <p>casi casi lo tento<span>vli</span></p>
           <p>Mi </p>

@@ -1,4 +1,3 @@
-import koa from 'koa';
 import path from "path";
 import express from "express";
 import http from 'http';
@@ -16,7 +15,7 @@ server.use(express.static(path.join(__dirname, 'build', 'public')));
 
 
 
-var app = koa();
+
 const hostname = process.env.HOSTNAME || "localhost";
 const port     = process.env.PORT || 8001;
 server.get('*', (req, res, next) => {
@@ -27,7 +26,12 @@ server.get('*', (req, res, next) => {
       res.redirect(302, redirectLocation.pathname + redirectLocation.search)
     } else if (renderProps) {
       let __body= ReactDOM.renderToStaticMarkup(<RoutingContext {...renderProps} />);
-      const data = { title: 'Servidor', description: '', css:'',style:'http://localhost:8080/public/bootstrap.css', body: __html, entry: 'http://localhost:8080/public/main.js' };
+      const data = { title: 'Servidor',
+                    description: '',
+                    css:'',
+                    style:'http://localhost:8080/public/bootstrap.css',
+                    body: __html, entry: 'http://localhost:8080/public/main.js'
+                  };
       let __html = ReactDOM.renderToString(<Html {...data} />);
       res.status(200).send(__html)
     } else {
