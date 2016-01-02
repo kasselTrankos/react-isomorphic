@@ -11,8 +11,9 @@ import ReactDOM from 'react-dom/server';
 
 
 const server = global.server = express();
-server.use(express.static(path.join(__dirname, 'build', 'public')));
-
+server.use(express.static('build/public'));
+//require('./demo.js');
+console.log(__dirname+'build/public/demo.js');
 
 
 
@@ -25,12 +26,14 @@ server.get('*', (req, res, next) => {
     } else if (redirectLocation) {
       res.redirect(302, redirectLocation.pathname + redirectLocation.search)
     } else if (renderProps) {
+      const webserver = process.env.NODE_ENV === "production" ? "" : "//" + hostname + ":8080";
       let __body= ReactDOM.renderToStaticMarkup(<RoutingContext {...renderProps} />);
       const data = { title: 'Servidor',
                     description: '',
                     css:'',
-                    style:'http://localhost:8080/public/bootstrap.css',
-                    body: __html, entry: 'http://localhost:8080/public/main.js'
+                    style:`${webserver}/public/bootstrap.css`,
+                    body: __html,
+                    entry: `${webserver}/public/main.js`
                   };
       let __html = ReactDOM.renderToString(<Html {...data} />);
       res.status(200).send(__html)
@@ -40,5 +43,5 @@ server.get('*', (req, res, next) => {
   })
 });
 server.listen(port, () => {
-  console.log(`The server is running at http://localhost:${port}/`);
+  console.log(`The server is now running at http://localhost:${port}/`);
 });

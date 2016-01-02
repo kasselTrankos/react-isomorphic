@@ -1,7 +1,10 @@
 require("babel-polyfill");
+
 require("babel-core/register")({
 	only: /src/,
-	presets: ["es2015", "react", "stage-0"]
+	presets: ["es2015", "react", "stage-0", "stage-3"],
+	//optional: ['runtime'],
+	plugins: ["syntax-async-functions","transform-regenerator"]
 });
 
 

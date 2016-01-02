@@ -1,4 +1,4 @@
-import css from './Main.scss';
+//import css from './Main.scss';
 import React, { Component, PropTypes } from 'react';
 
 import MainMenu from '../MainMenu'

@@ -1,5 +1,6 @@
+require("babel-polyfill");
 import koa from 'koa';
-
+import serve from "koa-static";
 import React from "react";
 import {RoutingContext, match} from "react-router";
 import routes from './routes';
@@ -8,6 +9,7 @@ import Html from './components/Html';
 import ReactDOM from 'react-dom/server';
 
 var app = global.server = koa();
+app.use(serve("build/public", {defer: true}));
 const hostname = process.env.HOSTNAME || "localhost";
 const port     = process.env.PORT || 8001;
 
